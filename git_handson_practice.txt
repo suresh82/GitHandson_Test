@@ -1,1 +1,17 @@
-practicing git hands on session with TAU
+GIT Commands:
+
+1) git --help
+2) git config --system(/--global/--local) <local scope by default)
+3) git status
+4) git log
+5) git init
+6) git config -l –local(lists all the local config)
+
+7) git add .
+8) git rm --cached <file> ( to get the files to unstage from staging)
+9) git ls-files --stage (to check all the files in index/staging)
+10) git commit -m "commit message"
+11) git remote add orgin "remote url"
+12) git push --set-upstream origin master
+
+13) git commit -am "commit message" (add and commit at one go)
