@@ -13,5 +13,24 @@ GIT Commands:
 10) git commit -m "commit message"
 11) git remote add orgin "remote url"
 12) git push --set-upstream origin master
-
 13) git commit -am "commit message" (add and commit at one go)
+
+14) git clone "remote-url"
+15)  git branch -vv [shows us which master branch our brach track to and latest commit message]
+16) git branch -l -a [shows all the brances in local repository]
+17) git fetch
+18) git merge
+19) git pull [fetch+merge]
+
+Note: As a remark here, we cannot pull any changes as long as there are modified files in the working directory which would be changed by the commits we are pulling and trying to merge of course. To get the modified files away from the working directory, we can either commit them to the local repository of that branch. Or, if we don't want to commit them yet, we can put them with stashing in a stash in the working directory.
+
+Stashing: When we want to save the current state of changes in the working directory and the index, we can use git stash.
+
+20) git stash
+21) git stash list [shows the list of stashes on WIP]
+22) git stash pop [would apply the stash and delete it from the list]
+23) git stash apply [would apply the stash but does not delete it from the list]
+
+Note: Note here that the stashes acts as a first in, last out process. This means that the latest stash is always on the top of the list
+
+24) git reflog
