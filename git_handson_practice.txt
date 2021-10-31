@@ -74,3 +74,6 @@ Note: It is important to notice here that when we use --amend, we rewrite the gi
 33) git rebase -i and then followed by the hash value
 34) git rebase -i HEAD~3 [3rd commit from where head pointing to]
 Note: One important thing to notice when rewriting the history with amending and rebase interactive is that in both cases, new commits with new hashes are created, but the timestamp of creation and the author are taken from the original commits. That is why I have marked these commits with an apostrophe.
+
+we should add here the new concept resoloving conflicts
+
