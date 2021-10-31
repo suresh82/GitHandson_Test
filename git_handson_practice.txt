@@ -5,6 +5,7 @@ GIT Commands:
 3) git status
 4) git log
 5) git init
+--> git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 6) git config -l –local(lists all the local config)
 
 7) git add .
@@ -68,3 +69,8 @@ Rewritting Commit History
 31) git commit -amend
 
 Note: It is important to notice here that when we use --amend, we rewrite the git history of a branch. Most commonly we do this on our own private feature or bug fix branches and not on the main master branch where everyone else is working on or taking their own branches off. it only changes the commit hash and commit message otherwise everything is same.
+
+32) git log --oneline
+33) git rebase -i and then followed by the hash value
+34) git rebase -i HEAD~3 [3rd commit from where head pointing to]
+Note: One important thing to notice when rewriting the history with amending and rebase interactive is that in both cases, new commits with new hashes are created, but the timestamp of creation and the author are taken from the original commits. That is why I have marked these commits with an apostrophe.
