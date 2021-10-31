@@ -76,3 +76,12 @@ Note: It is important to notice here that when we use --amend, we rewrite the gi
 Note: One important thing to notice when rewriting the history with amending and rebase interactive is that in both cases, new commits with new hashes are created, but the timestamp of creation and the author are taken from the original commits. That is why I have marked these commits with an apostrophe.
 
 Resolving Conflicts:
+while merging-->
+[when you have merge conflicts, go to the file(s) which has conflicts and remove the unneccessary ones and save it]
+35) git merge --abort
+while rebasing -->
+Once we are done resolving the conflicts while rebasing, we then have to add these changes to the staging area and after that to a git rebase --continue.
+There is no need to commit as rebasing does not introduce a merge commit. The conflict will be resolved in the new commit E', created by rebasing.
+
+36) git rebase --continue
+37) git rebase --abort
