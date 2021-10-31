@@ -63,3 +63,8 @@ Rebase:
 This is another way of merging 2 branches. With the concept of rebasing, we get a shiny, clean, and straight forward branch history without Git creating an additional merge commit.
 
 30) git rebase master [It is important to notice here that we rebase onto the current state of the master branch and not into the master branch itself]
+
+Rewritting Commit History
+31) git commit -amend
+
+Note: It is important to notice here that when we use --amend, we rewrite the git history of a branch. Most commonly we do this on our own private feature or bug fix branches and not on the main master branch where everyone else is working on or taking their own branches off. it only changes the commit hash and commit message otherwise everything is same.
