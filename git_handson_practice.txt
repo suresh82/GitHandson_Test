@@ -34,3 +34,32 @@ Stashing: When we want to save the current state of changes in the working direc
 Note: Note here that the stashes acts as a first in, last out process. This means that the latest stash is always on the top of the list
 
 24) git reflog
+
+Branches
+25) git branch "branch name"
+26) git checkout "branch name"
+27) git checkout -b "branch name" [25,26 at one go]
+
+Note: The HEAD is a simple file in the .git directory which points to the active branch and thereby to the latest commit of that branch.
+--> The first one is this “FETCH_HEAD” file — this file is a short-lived pointer to keep track of what has just been fetched from the remote repository.
+--> Then we have “ORIG_HEAD” pointer file — which saves that previous state of the remote HEAD pointer.
+
+
+Merging one branch into another-ff merge:
+Note: You always merge another branch into the one you have currently set as active, which means checked out branch
+
+A fast-forward merge means that the master branch pointer HEAD can simply be moved forward to the commit where the “MyNewBranch” is pointing to. All this, because the master branch hasn't diverged through other commits on it from the “MyNewBranch”
+
+28) git merge "branch name" [merging the branchname changes onto current active branch-ff merge]
+29) git branch -d "branch name" [delete branch]
+
+Merging the Diverged Branches:
+
+This means that in this constellation, the branches have diverged from each other. when you merge such branches, git creates additional commit so-called merge-commit
+
+when you merge.it asks for new commit
+
+Rebase:
+This is another way of merging 2 branches. With the concept of rebasing, we get a shiny, clean, and straight forward branch history without Git creating an additional merge commit.
+
+30) git rebase master [It is important to notice here that we rebase onto the current state of the master branch and not into the master branch itself]
