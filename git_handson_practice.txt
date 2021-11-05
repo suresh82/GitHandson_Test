@@ -85,3 +85,12 @@ There is no need to commit as rebasing does not introduce a merge commit. The co
 
 36) git rebase --continue
 37) git rebase --abort
+38) git rebase --skip
+
+Cherry Picking, Resetting and Reverting
+
+Cherry Picking:
+We might get into the situation one day, where we just want to take some specific changes in a commit from one branch and apply them to another branch. That is exactly what cherry-picking allows us to do, either forcing a commit or a series of commits
+Similar to rebase, it will create a new commit, or commits, and put them on the top of a branch.
+
+39) git cherry-pick <commitHash>
