@@ -94,3 +94,31 @@ We might get into the situation one day, where we just want to take some specifi
 Similar to rebase, it will create a new commit, or commits, and put them on the top of a branch.
 
 39) git cherry-pick <commitHash>
+
+Resetting:
+40) git reset --soft HEAD~1 [Working directory and staging area get untouched, it just points the head to previous commit in local repo]
+41) git reset --mixed HEAD~1 [Working directory gets untouched, staging and local report gets pointed to previous version] 
+42) git reset --hard HEAD~1 [all the three trees will now point to previous commit]
+
+Reverting:
+43) git revert <commitHash>
+
+Git Branching Strategies
+
+git flow: The master branch should always reflect the production ready state.
+Release branches for support preparations of a new production release
+Feature branches for the development of new features or tests
+Hot fix branches for immediate reactions upon critical issues, bugs in the master branch and additional bug fix branches for handling, let's say, normal bug fixes
+github flow: Anything in the master branch is deployable.
+Each time you create a new branch, for example, a feature or a bug fix branch, you branch away from the master branch.
+Trunk based Development:
+In Trunk Based development, short TBD, everyone is working on a single branch, usually the master branch with open access to it
+
+Most Used GIT Repository Managers
+gitlab
+github
+bitbucket
+gitbuckt
+gogs
+gitea
+
